@@ -3,14 +3,16 @@
 ### Is a small python program, which can run a fragment of the Sprotin.fo dictionary from Terminal. 
 #### Note: work in progress
 
-Commands
+|Commands|
+|--------|
+---
 ```
-  python sprotin.py collection en
+$ python sprotin.py collection en
 ```
 This command will translate the word "collection" from English to Faroese
 
 ```
-  python sprotin.py bil da
+$ python sprotin.py bil da
 ```
 This command will translate the word "bil" from Faroese to Danish
 
@@ -21,5 +23,5 @@ This command will translate the word "bil" from Faroese to Danish
 #### Hint: It would be smart to create an alias in your bash_profile.
 #### So a run could look something like this:
 ```
-sprotin collection en
+$ sprotin collection en
 ```
