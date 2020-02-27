@@ -13,6 +13,8 @@ def search(searchString1, searchString2):
         webbrowser.open('https://sprotin.fo/dictionaries?_SearchInflections=0&_SearchDescriptions=0&_SearchFor=' + str(
             searchString1) +
                         '&_DictionaryPage=1&_DictionaryId=5&_Group=')
+    else:
+        print("Error: You have typed something wrong." "\n" "Try: en or da as your last parameter.")
 
 
 search(searchString1, searchString2)
