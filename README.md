@@ -1,4 +1,4 @@
-# Sprotin_cli
+# sprotin-cli
 
 ### Is a small python program, which can run a fragment of the Sprotin.fo dictionary from Terminal. 
 #### Note: work in progress
