@@ -2,21 +2,46 @@
 
 ### Is a small python program, which can run a fragment of the Sprotin.fo dictionary from Terminal. 
 
-#### The idea is that you type a word, which you want to translate, and the preferred languages you want to translate from and to, into the terminal, and the following result will be displayed in the terminal.
+#### purpose
+* #### Type the word, which you want to translate, and the preferred languages you want to translate from and to, into the terminal, and the following result will be displayed in the terminal.
 ---
-Command examples
+#### Command examples
 
+Ex 2.
 ```
-python sprotin.py --fo:en eftirfylgjandi
-```
-Resuls
-```
-following (t.d. the following lines); ensuing (t.d. the ensuing battle); succeeding (t.d. the succeeding events)
-
+sprotin --fo:fo bilur
 ```
 
+Result:
+
+```
+motorakfar vanl. á fýra hjólum (til fólka- og vøruflutning), bil; sms. t.d. avlamis-, egin-, farma-, ferða-, her-, kassa-, last-, leigu-, lík-, mjólkar-, persón-, post-, rusk-, sjúkra-, sløkki-, tanga-, vøru-
+```
 
 
+Ex 2.
+```
+python sprotin.py --en:fo infant
+```
+Resuls: 
+```
+infant:
+1 lítið barn; infant (in arms) pinkubarn, vøggubarn, havingarbarn (t.d. the enormous death-rate among infants) 
+2 (løgfr.) ómyndingur, ikki komin til lógaldurs (t.d. contracts made by an infant) 
+3 l barna- (t.d. years), barnsligur; sum er um at koma fyri seg (t.d. civilization; industry)
+
+infanta:
+infantinna (sponsk el. portugisisk prinsessa)
+
+infante:
+infant (spanskur el. portugisiskur prinsur)
+
+infanticide:
+barnamorð; barnamordari
+
+infanticipate:
+(am.) S ganga við barni
+```
 #### At this moment in time, the program can only translate: 
 * Faroese &#8594; Faroese
 * English &#8594; Faroese
