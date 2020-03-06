@@ -68,12 +68,3 @@ def noResult(data, res):
     print("")
 
 search(langPara, searchString)
-
-
-
-
-
-
-
-
-
