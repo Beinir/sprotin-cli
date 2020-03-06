@@ -50,7 +50,7 @@ infanticipate:
 * Faroese &#8594; Danish
 
 #### Hint: It would be smart to create an alias in your bash_profile.
-* So a run could look something like this:
+* So commands could look something like this:
 ```
 $ sprotin --fo:fo bilur
 $ sprotin --en:fo infant
