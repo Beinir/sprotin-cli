@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="052763ae-7568-4537-8b82-1f12a500f2f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprotin.py" beforeDir="false" afterPath="$PROJECT_DIR$/sprotin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +35,11 @@
       <option name="presentableId" value="Default" />
       <updated>1582834033163</updated>
       <workItem from="1582834037144" duration="79000" />
-      <workItem from="1582834366964" duration="4093000" />
+      <workItem from="1582834366964" duration="4294000" />
+      <workItem from="1583236633245" duration="102000" />
+      <workItem from="1583236758221" duration="10000" />
+      <workItem from="1583276548241" duration="7000" />
+      <workItem from="1583276562098" duration="5000" />
     </task>
     <servers />
   </component>
@@ -44,10 +47,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="319" y="204" key="com.intellij.ide.util.TipDialog" timestamp="1582835077939">
+    <state x="319" y="204" key="com.intellij.ide.util.TipDialog" timestamp="1583236633292">
       <screen x="0" y="23" width="1280" height="697" />
     </state>
-    <state x="319" y="204" key="com.intellij.ide.util.TipDialog/0.23.1280.697@0.23.1280.697" timestamp="1582835077939" />
+    <state x="319" y="204" key="com.intellij.ide.util.TipDialog/0.23.1280.697@0.23.1280.697" timestamp="1583236633292" />
     <state x="370" y="290" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1582839242705">
       <screen x="0" y="23" width="1280" height="697" />
     </state>
