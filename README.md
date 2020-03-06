@@ -7,9 +7,9 @@
 ---
 #### Command examples
 
-Ex 2.
+Ex 1.
 ```
-sprotin --fo:fo bilur
+$ sprotin --fo:fo bilur
 ```
 
 Result:
@@ -21,7 +21,7 @@ motorakfar vanl. á fýra hjólum (til fólka- og vøruflutning), bil; sms. t.d.
 
 Ex 2.
 ```
-python sprotin.py --en:fo infant
+$ python sprotin.py --en:fo infant
 ```
 Resuls: 
 ```
@@ -52,5 +52,7 @@ infanticipate:
 #### Hint: It would be smart to create an alias in your bash_profile.
 * So a run could look something like this:
 ```
-$ sprotin --fo:en eftirfylgjandi
+$ sprotin --fo:fo bilur
+$ sprotin --en:fo infant
+
 ```
