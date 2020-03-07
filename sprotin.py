@@ -19,21 +19,21 @@ def search(langPara, searchString):
         if langPara == '--fo:fo':
             data = requests.get('https://sprotin.fo/dictionary_search_json.php?DictionaryId=1&DictionaryPage=1&SearchFor=' + str(searchString) +
                                 '&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0')
-            parseJson(data)
+            parse_json(data)
         elif langPara == '--en:fo':
             data = requests.get('https://sprotin.fo/dictionary_search_json.php?DictionaryId=3&DictionaryPage=1&SearchFor=' + str(searchString) +
                                 '&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0')
-            parseJson(data)
+            parse_json(data)
 
         elif langPara == '--fo:en':
             data = requests.get('https://sprotin.fo/dictionary_search_json.php?DictionaryId=2&DictionaryPage=1&SearchFor=' + str(searchString) +
                                 '&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0')
-            parseJson(data)
+            parse_json(data)
 
         elif langPara == '--da:fo':
             data = requests.get('https://sprotin.fo/dictionary_search_json.php?DictionaryId=5&DictionaryPage=1&SearchFor=' + str(searchString) +
                                 '&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0')
-            parseJson(data)
+            parse_json(data)
         elif langPara == '--fo:da':
             data = requests.get('https://sprotin.fo/dictionary_search_json.php?DictionaryId=1&DictionaryPage=1&SearchFor=' + str(searchString) +
                                 '&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0')
@@ -41,7 +41,7 @@ def search(langPara, searchString):
         else:
             print("Error: You have typed something wrong." "\n" "Try: en or da as your last parameter.")
 
-def parseJson(data):
+def parse_json(data):
     res = json.loads(data.text)
     i = 0
     for word in res["words"]:
@@ -56,10 +56,9 @@ def parseJson(data):
             i = i + 1
         else:
             break
-    noResult(data, res)
+    no_result(data, res)
 
-
-def noResult(data, res):
+def no_result(data, res):
     error = res["message"]
     if error != None:
         print(error)
