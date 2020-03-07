@@ -54,5 +54,4 @@ infanticipate:
 ```
 $ sprotin --fo:fo bilur
 $ sprotin --en:fo infant
-
 ```
