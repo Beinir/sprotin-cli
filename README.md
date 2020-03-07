@@ -1,6 +1,6 @@
 # sprotin-cli
 
-### Is a small python program, which can run a fragment of the Sprotin.fo dictionary from Terminal. 
+### Is a small python program, which can access a fragment of the Sprotin.fo dictionary from Terminal. 
 
 #### Usage
 * #### Type the word, which you want to translate, and the preferred languages you want to translate from and to, into the terminal, and the result will be displayed in the terminal.
