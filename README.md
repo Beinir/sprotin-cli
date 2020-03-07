@@ -43,11 +43,11 @@ infanticipate:
 (am.) S ganga við barni
 ```
 #### At this moment in time, the program can only translate: 
-* Faroese &#8594; Faroese
-* English &#8594; Faroese
-* Faroese &#8594; English
-* Danish &#8594; Faroese
-* Faroese &#8594; Danish
+* Faroese &#8594; Faroese ```sprotin.py --fo:fo bilur```
+* English &#8594; Faroese ```sprotin.py --en:fo car```
+* Faroese &#8594; English ```sprotin.py --fo:en bilur```
+* Danish &#8594; Faroese ```sprotin.py --da:fo bil```
+* Faroese &#8594; Danish ```sprotin.py --fo:da bilur```
 
 #### Hint: It would be smart to create an alias in your bash_profile.
 * So commands could look something like this:
