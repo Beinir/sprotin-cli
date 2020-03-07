@@ -37,7 +37,7 @@ def search(langPara, searchString):
         elif langPara == '--fo:da':
             data = requests.get('https://sprotin.fo/dictionary_search_json.php?DictionaryId=1&DictionaryPage=1&SearchFor=' + str(searchString) +
                                 '&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0')
-            parseJson(data)
+            parse_json(data)
         else:
             print("Error: You have typed something wrong." "\n" "Try: en or da as your last parameter.")
 
