@@ -58,12 +58,15 @@ func main() {
 	} else if len(flag.Args()) == 1 {
 		word = flag.Args()[0]
 	} else {
+		fmt.Println(Red("argument error"))
 		os.Exit(2)
 	}
 
 	dictionaryId, ok := targets[target]
 	if !ok {
+		fmt.Println(Red("argument error"))
 		os.Exit(2)
+		
 	}
 
 	url := fmt.Sprintf(url_format, dictionaryId, word)
