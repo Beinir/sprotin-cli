@@ -47,6 +47,7 @@ func main() {
 	}
 
 	url_format := "https://sprotin.fo/dictionary_search_json.php?DictionaryId=1&DictionaryPage=%d&SearchFor=%s&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0"
+	
 	var word string
 	var target = "fo:fo"
 
@@ -89,15 +90,23 @@ func main() {
 		log.Fatal(err)
 	}
 
+	i := 0
+
 	for _, word := range result.Words {
-		print_word(word)
+	
+		print_word(word, i)	 
+		i++
 	}
+	fmt.Println(Blue("Done"))
+
 }
 
-func print_word(word Word) {
+func print_word(word Word, i int) {
 	re := regexp.MustCompile(`<.*?>`)
-	explReg := re.ReplaceAllString(word.Explanation, "")
-	searchReg := re.ReplaceAllString(word.SearchWord, "")
-	fmt.Println(searchReg)
-	fmt.Printf("%s\n", Red(explReg))
+	if i <= 6 {
+		explReg := re.ReplaceAllString(word.Explanation, "")
+		searchReg := re.ReplaceAllString(word.SearchWord, "")
+		fmt.Println(searchReg)
+		fmt.Printf("%s\n", Green(explReg)) 
+		 } 
 }
