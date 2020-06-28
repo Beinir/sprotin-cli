@@ -90,7 +90,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	i := 0
+	i := 1
 
 	for _, word := range result.Words {
 	
@@ -106,7 +106,7 @@ func print_word(word Word, i int) {
 	if i <= 6 {
 		explReg := re.ReplaceAllString(word.Explanation, "")
 		searchReg := re.ReplaceAllString(word.SearchWord, "")
-		fmt.Println(searchReg)
+		fmt.Println(i,searchReg)
 		fmt.Printf("%s\n", Green(explReg)) 
 		 } 
 }
