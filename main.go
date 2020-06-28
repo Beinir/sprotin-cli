@@ -101,12 +101,6 @@ func main() {
 
 }
 
-func selector() {
-
-
-
-}
-
 func print_word(word Word, i int) {
 	re := regexp.MustCompile(`<.*?>`)
 	if i <= 6 {
