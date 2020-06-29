@@ -63,6 +63,7 @@ func main() {
 		os.Exit(2)
 	}
 
+	// Ohhhh This is a hack!!!!!
 	if target == "fo:en" {
 		targets["fo:en"] = targets["fo:fo"]
 		url_format = "https://sprotin.fo/dictionary_search_json.php?DictionaryId=2&DictionaryPage=%d&SearchFor=%s&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0"
