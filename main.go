@@ -14,23 +14,23 @@ import (
 )
 
 type Word struct {
-	PrependWord string
-	SearchWord string
-	DisplayWord string
-	WordList string
-	InflexCats string
+	PrependWord        string
+	SearchWord         string
+	DisplayWord        string
+	WordList           string
+	InflexCats         string
 	ShortInflectedForm string
-	InflectedForm []string
-	Explanation string
-	Origin string
-	OriginSource string
-	GrammarComment string
-	WordNr string
-	Index int
-	Phonetic string
-	Date string
-	Groups []string
-	ShortInflection string
+	InflectedForm      []string
+	Explanation        string
+	Origin             string
+	OriginSource       string
+	GrammarComment     string
+	WordNr             string
+	Index              int
+	Phonetic           string
+	Date               string
+	Groups             []string
+	ShortInflection    string
 }
 
 type Search struct {
@@ -38,6 +38,7 @@ type Search struct {
 }
 
 func main() {
+
 	targets := map[string]int{
 		"fo:fo": 1,
 		"fo:en": 2,
@@ -46,10 +47,10 @@ func main() {
 		"da:fo": 5,
 	}
 
-	url_format := "https://sprotin.fo/dictionary_search_json.php?DictionaryId=1&DictionaryPage=%d&SearchFor=%s&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0"
-	
+	var url_format string
+	var target string
 	var word string
-	var target = "fo:fo"
+	target = "fo:fo"
 
 	flag.Parse()
 
@@ -62,11 +63,26 @@ func main() {
 		os.Exit(2)
 	}
 
+	if target == "fo:en" {
+		targets["fo:en"] = targets["fo:fo"]
+		url_format = "https://sprotin.fo/dictionary_search_json.php?DictionaryId=2&DictionaryPage=%d&SearchFor=%s&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0"
+	} else if target == "fo:fo" {
+		url_format = "https://sprotin.fo/dictionary_search_json.php?DictionaryId=1&DictionaryPage=%d&SearchFor=%s&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0"
+	} else if target == "en:fo" {
+		targets["en:fo"] = targets["fo:fo"]
+		url_format = "https://sprotin.fo/dictionary_search_json.php?DictionaryId=3&DictionaryPage=%d&SearchFor=%s&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0"
+	} else if target == "fo:da" {
+		targets["fo:da"] = targets["fo:fo"]
+		url_format = "https://sprotin.fo/dictionary_search_json.php?DictionaryId=4&DictionaryPage=%d&SearchFor=%s&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0"
+	} else if target == "da:fo" {
+		targets["da:fo"] = targets["fo:fo"]
+		url_format = "https://sprotin.fo/dictionary_search_json.php?DictionaryId=5&DictionaryPage=%d&SearchFor=%s&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0"
+	}
+
 	dictionaryId, ok := targets[target]
 	if !ok {
 		fmt.Println(Red("argument error"))
 		os.Exit(2)
-		
 	}
 
 	url := fmt.Sprintf(url_format, dictionaryId, word)
@@ -93,12 +109,11 @@ func main() {
 	i := 1
 
 	for _, word := range result.Words {
-	
-		print_word(word, i)	 
+
+		print_word(word, i)
 		i++
 	}
 	fmt.Println(Blue("Done"))
-
 }
 
 func print_word(word Word, i int) {
@@ -106,7 +121,7 @@ func print_word(word Word, i int) {
 	if i <= 6 {
 		explReg := re.ReplaceAllString(word.Explanation, "")
 		searchReg := re.ReplaceAllString(word.SearchWord, "")
-		fmt.Println(i,searchReg)
-		fmt.Printf("%s\n", Green(explReg)) 
-		 } 
+		fmt.Println(i, searchReg)
+		fmt.Printf("%s\n", Green(explReg))
+	}
 }
