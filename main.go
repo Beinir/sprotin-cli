@@ -78,6 +78,9 @@ func main() {
 	} else if target == "da:fo" {
 		targets["da:fo"] = targets["fo:fo"]
 		url_format = "https://sprotin.fo/dictionary_search_json.php?DictionaryId=5&DictionaryPage=%d&SearchFor=%s&SearchInflections=0&SearchDescriptions=0&Group=&SkipOtherDictionariesResults=0&SkipSimilarWords=0"
+	} else {
+		fmt.Println(Red("Error in the Language specification Parameter"))
+		os.Exit(2)
 	}
 
 	dictionaryId, ok := targets[target]
@@ -105,6 +108,10 @@ func main() {
 	var result Search
 	if err := json.Unmarshal(body, &result); err != nil {
 		log.Fatal(err)
+	}
+
+	if len(result.Words) < 1 {
+		fmt.Println(Green("Einki Úrslit/No result"))
 	}
 
 	i := 1
