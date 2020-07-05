@@ -107,6 +107,7 @@ func main() {
 
 	var result Search
 	if err := json.Unmarshal(body, &result); err != nil {
+		fmt.Println(Green("Hey"))
 		log.Fatal(err)
 	}
 
